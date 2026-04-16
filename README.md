@@ -85,24 +85,28 @@ Esto indica que el negocio mantiene un crecimiento sostenido sin grandes fluctua
 
 ###  Country Concentration Risk
 
-La facturación está muy concentrada por país: United Kingdom lidera claramente, seguido de Japan y luego RSA; el resto aporta bastante menos.
+El análisis por país muestra una altísima concentración de ventas en United Kingdom, con una diferencia muy marcada respecto al resto.
 
-La brecha entre el primer país y el resto es considerable, lo que indica una fuerte dependencia de un único mercado.
+Los siguientes países (Netherlands, EIRE, Germany, France) tienen una participación mucho menor.
 
-Esto implica:
-- Riesgo si disminuye la demanda en UK
+Esto indica:
+
+- Fuerte dependencia de un solo mercado (UK)
+- Riesgo ante cambios en ese mercado
 - Oportunidad de expansión en otros países
-- Posible necesidad de estrategias de diversificación
-
 
 ###  Product Distribution (Top Products)
 
-En productos, hay un top seller muy marcado (PAPER CRAFT , LITTLE BIRDIE) y luego un segundo grupo fuerte (MEDIUM CERAMIC TOP STORAGE JAR, etc.), este indicador es útil para priorizar stock y campañas.
+El análisis de productos muestra que ciertos artículos concentran gran parte del volumen de ventas.
 
-Sugerencias:
-- Priorizar stock de productos más demandados
-- Optimizar campañas de marketing
-- Detectar mejores patrones de consumo 
+Entre los productos más vendidos destacan:
 
-Este enfoque ayuda a enfocar recursos en los productos que generan mayor impacto en el negocio.
+- PAPER CRAFT, LITTLE BIRDIE
+- MEDIUM CERAMIC TOP STORAGE JAR
+- WORLD WAR 2 GLIDERS ASSTD DESIGNS
 
+Esto sugiere:
+
+- Existencia de productos “estrella”
+- Oportunidad de optimizar stock en base a demanda
+- Posibilidad de enfocar marketing en estos productos
