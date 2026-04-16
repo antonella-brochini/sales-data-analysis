@@ -76,21 +76,33 @@ El dashboard permite:
 - Analizar productos destacados
 - Comunicar insights de negocio de manera clara
 
-## Project Structure
+## Insight
 
-```bash
-sales-data-analysis/
-│
-├── data/
-│   └── Online Retail.xlsx
-│
-├── notebooks/
-│   └── analysis.ipynb
-│
-├── powerbi/
-│   └── sales_dashboard.pbix
-│
-├── images/
-│   └── dashboard-preview.png
-│
-└── README.md
+Hay crecimiento de ventas en el tiempo (2010 → 2011), lo que sugiere una demanda en expansión.
+
+Esto indica que el negocio mantiene un crecimiento sostenido sin grandes fluctuaciones, lo que es una señal positiva de estabilidad y previsibilidad en los ingresos.
+
+
+###  Country Concentration Risk
+
+La facturación está muy concentrada por país: United Kingdom lidera claramente, seguido de Japan y luego RSA; el resto aporta bastante menos.
+
+La brecha entre el primer país y el resto es considerable, lo que indica una fuerte dependencia de un único mercado.
+
+Esto implica:
+- Riesgo si disminuye la demanda en UK
+- Oportunidad de expansión en otros países
+- Posible necesidad de estrategias de diversificación
+
+
+###  Product Distribution (Top Products)
+
+En productos, hay un top seller muy marcado (PAPER CRAFT , LITTLE BIRDIE) y luego un segundo grupo fuerte (MEDIUM CERAMIC TOP STORAGE JAR, etc.), este indicador es útil para priorizar stock y campañas.
+
+Sugerencias:
+- Priorizar stock de productos más demandados
+- Optimizar campañas de marketing
+- Detectar mejores patrones de consumo 
+
+Este enfoque ayuda a enfocar recursos en los productos que generan mayor impacto en el negocio.
+
