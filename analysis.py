@@ -1,61 +1,34 @@
 import pandas as pd
 
-# ========================
-# 1. Cargar datos
-# ========================
+# 1. Cargar archivo
 df = pd.read_excel("Online Retail.xlsx")
 
-# ========================
-# 2. Limpieza de datos
-# ========================
-# Eliminar filas sin CustomerID
-df = df.dropna(subset=["CustomerID"])
+# 2. Ver columnas y tipos
+print(df.columns)
+print(df.dtypes)
 
-# Eliminar devoluciones (Quantity negativas)
+# 3. Limpiar nombres de columnas por si tienen espacios
+df.columns = df.columns.str.strip()
+
+# 4. Convertir Quantity y UnitPrice a numéricos correctamente
+df["Quantity"] = pd.to_numeric(df["Quantity"], errors="coerce")
+df["UnitPrice"] = pd.to_numeric(df["UnitPrice"], errors="coerce")
+
+# 5. Eliminar filas nulas en campos clave
+df = df.dropna(subset=["Quantity", "UnitPrice", "Country"])
+
+# 6. Filtrar valores válidos
 df = df[df["Quantity"] > 0]
+df = df[df["UnitPrice"] > 0]
 
-# ========================
-# 3. Crear métricas base
-# ========================
-# Revenue (ventas)
+# 7. Recalcular Revenue desde cero
 df["Revenue"] = df["Quantity"] * df["UnitPrice"]
 
-# ========================
-# 4. Trabajar con fechas
-# ========================
-df["InvoiceDate"] = pd.to_datetime(df["InvoiceDate"])
+# 8. Verificar resultados
+print(df[["Quantity", "UnitPrice", "Revenue"]].head(10))
+print("Revenue total:", df["Revenue"].sum())
 
-df["Year"] = df["InvoiceDate"].dt.year
-df["Month"] = df["InvoiceDate"].dt.month
-df["Date"] = df["InvoiceDate"].dt.date
+# 9. Guardar archivo limpio
+df.to_excel("Online_Retail_Clean.xlsx", index=False)
 
-# ========================
-# 5. KPIs de negocio
-# ========================
-total_revenue = df["Revenue"].sum()
-total_orders = df["InvoiceNo"].nunique()
-avg_order_value = df.groupby("InvoiceNo")["Revenue"].sum().mean()
-unique_customers = df["CustomerID"].nunique()
-
-print("\n--- KPIs ---")
-print("Total Revenue:", total_revenue)
-print("Total Orders:", total_orders)
-print("Average Order Value:", avg_order_value)
-print("Unique Customers:", unique_customers)
-
-# ========================
-# 6. Análisis
-# ========================
-sales_by_country = df.groupby("Country")["Revenue"].sum().reset_index()
-sales_by_date = df.groupby("Date")["Revenue"].sum().reset_index()
-top_products = df.groupby("Description")["Quantity"].sum().reset_index()
-
-# ========================
-# 7. Exportar para Power BI
-# ========================
-df.to_csv("clean_data.csv", index=False)
-sales_by_country.to_csv("sales_by_country.csv", index=False)
-sales_by_date.to_csv("sales_by_date.csv", index=False)
-top_products.to_csv("top_products.csv", index=False)
-
-print("\nArchivos generados correctamente")
+print("Archivo limpio guardado como Online_Retail_Clean.xlsx")
