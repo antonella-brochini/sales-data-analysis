@@ -116,6 +116,7 @@ Esto sugiere:
 - Posible estacionalidad
 - Comportamiento estable con oportunidades de crecimiento
 
+
 ---
 
 ### Country Concentration Risk
@@ -128,7 +129,9 @@ Esto implica:
 - Riesgo ante cambios en la demanda en UK
 - Oportunidad de expansión hacia otros mercados
 
+
 ---
+
 
 ### Product Distribution
 
@@ -157,7 +160,3 @@ El análisis muestra que el negocio:
 - Presenta oportunidades de crecimiento en otros países y períodos específicos
 
 Estos hallazgos pueden utilizarse para mejorar la toma de decisiones comerciales y optimizar la estrategia de negocio.
-
-
-
-
