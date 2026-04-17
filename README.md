@@ -4,9 +4,11 @@ Análisis de datos de ventas realizado con Python y Power BI para explorar tende
 
 ## Overview
 
-Este proyecto analiza un dataset de ventas online con el objetivo de extraer insights de negocio y presentarlos de forma clara mediante visualizaciones.  
+Este proyecto analiza un dataset de ventas online con el objetivo de extraer insights de negocio y presentarlos de forma clara mediante visualizaciones.
 
-El análisis fue desarrollado usando **Python** para limpieza y exploración de datos, y **Power BI** para la construcción de dashboards interactivos.
+El análisis fue desarrollado utilizando **Python (Pandas)** para limpieza y transformación de datos, y **Power BI** para la construcción de un dashboard interactivo con métricas clave y visualizaciones.
+
+---
 
 ## Objectives
 
@@ -16,14 +18,17 @@ El análisis fue desarrollado usando **Python** para limpieza y exploración de 
 - Detectar los productos más vendidos
 - Obtener insights útiles para la toma de decisiones comerciales
 
+---
+
 ## Tools & Technologies
 
 - Python
 - Pandas
-- Matplotlib
 - OpenPyXL
 - Power BI
 - Git & GitHub
+
+---
 
 ## Dataset
 
@@ -38,71 +43,121 @@ El proyecto utiliza un dataset de ventas online que incluye información como:
 - CustomerID
 - Country
 
+---
+
 ## Data Cleaning
 
 Durante el proceso de preparación de datos se realizaron tareas como:
 
 - Eliminación de valores nulos
 - Eliminación de registros inválidos o cancelados
-- Conversión de fechas
-- Creación de métricas derivadas como `TotalSales`
+- Conversión de tipos de datos (fechas y valores numéricos)
+- Corrección de errores de modelado en métricas (revenue)
+- Creación de métricas derivadas como `Revenue`
+
+---
 
 ## Analysis Performed
 
-Se analizaron distintos aspectos del negocio, entre ellos:
+Se analizaron distintos aspectos del negocio:
 
-- Evolución de ventas en el tiempo
+- Evolución de ventas en el tiempo (tendencia mensual)
 - Ventas por país
 - Productos más vendidos
-- Comportamiento general del volumen de compras
+- Métricas clave del negocio (KPIs)
+
+---
+
+## Key Metrics (KPIs)
+
+El dashboard incluye indicadores clave como:
+
+- Total Revenue
+- Total Orders
+- Total Customers
+- Average Order Value
+
+Estas métricas permiten evaluar rápidamente el desempeño general del negocio.
+
+---
 
 ## Visualizations
 
 El proyecto incluye visualizaciones como:
 
-- Línea de ventas por mes
-- Barras de ventas por país
+- Tendencia de ventas por mes
+- Revenue por país
 - Top productos por cantidad vendida
-- Indicadores generales de desempeño
+- KPIs principales
+
+---
 
 ## Power BI Dashboard
 
-Además del análisis en Python, se creó un dashboard en Power BI para presentar los resultados de forma visual e interactiva.
+Se desarrolló un dashboard principal que centraliza toda la información:
 
-El dashboard permite:
+- KPIs en la parte superior
+- Tendencia de ventas en el tiempo
+- Análisis geográfico
+- Análisis de productos
 
-- Explorar ventas por período
-- Comparar países
-- Analizar productos destacados
-- Comunicar insights de negocio de manera clara
+Esto permite obtener una visión integral del negocio en una sola pantalla.
 
-## Insight
+---
 
-Hay crecimiento de ventas en el tiempo (2010 → 2011), lo que sugiere una demanda en expansión.
+## Insights
 
-Esto indica que el negocio mantiene un crecimiento sostenido sin grandes fluctuaciones, lo que es una señal positiva de estabilidad y previsibilidad en los ingresos.
+### Sales Growth
 
+Se observa un crecimiento claro en las ventas entre 2010 y 2011, con picos hacia fin de año.
 
-###  Country Concentration Risk
+Esto sugiere:
+- Demanda en expansión
+- Posible estacionalidad
+- Comportamiento estable con oportunidades de crecimiento
 
-La facturación está muy concentrada por país: United Kingdom lidera claramente, seguido de Japan y luego RSA; el resto aporta bastante menos.
+---
 
-La brecha entre el primer país y el resto es considerable, lo que indica una fuerte dependencia de un único mercado.
+### Country Concentration Risk
+
+El revenue está altamente concentrado en el United Kingdom, con una diferencia significativa respecto a otros países como Netherlands, EIRE, Germany y France.
 
 Esto implica:
-- Riesgo si disminuye la demanda en UK
-- Oportunidad de expansión en otros países
-- Posible necesidad de estrategias de diversificación
 
+- Fuerte dependencia de un solo mercado
+- Riesgo ante cambios en la demanda en UK
+- Oportunidad de expansión hacia otros mercados
 
-###  Product Distribution (Top Products)
+---
 
-En productos, hay un top seller muy marcado (PAPER CRAFT , LITTLE BIRDIE) y luego un segundo grupo fuerte (MEDIUM CERAMIC TOP STORAGE JAR, etc.), este indicador es útil para priorizar stock y campañas.
+### Product Distribution
 
-Sugerencias:
-- Priorizar stock de productos más demandados
+Un grupo reducido de productos concentra gran parte del volumen de ventas.
+
+Entre los productos más vendidos destacan:
+
+- PAPER CRAFT, LITTLE BIRDIE
+- MEDIUM CERAMIC TOP STORAGE JAR
+- WORLD WAR 2 GLIDERS ASSTD DESIGNS
+
+Esto permite:
+
+- Priorizar stock de productos clave
 - Optimizar campañas de marketing
-- Detectar mejores patrones de consumo 
+- Detectar patrones de consumo
 
-Este enfoque ayuda a enfocar recursos en los productos que generan mayor impacto en el negocio.
+---
+
+## Business Insight
+
+El análisis muestra que el negocio:
+
+- Depende fuertemente de un mercado principal (UK)
+- Está impulsado por un grupo reducido de productos
+- Presenta oportunidades de crecimiento en otros países y períodos específicos
+
+Estos hallazgos pueden utilizarse para mejorar la toma de decisiones comerciales y optimizar la estrategia de negocio.
+
+
+
 
